@@ -25,7 +25,7 @@ pipeline {
 
 		stage('Deploy'){
 			steps{
-				sh 'scp -i .ssh/id_rsa -r build node_modules package.json public ec2-user@172.31.21.220:/usr/share/simple-node-js-react-npm-app/'
+				sh 'scp -i /var/lib/jenkins/.ssh/id_rsa -r build node_modules package.json public ec2-user@172.31.21.220:/usr/share/simple-node-js-react-npm-app/'
 				sh 'runscript.sh'
 			}
 		}
