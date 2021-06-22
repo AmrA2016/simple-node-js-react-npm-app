@@ -1,4 +1,7 @@
 pipeline {
+
+	agent any
+	
 	stages {
 		stage('Pull New Code'){
 			steps{
